@@ -1,0 +1,110 @@
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+apply plugin: 'com.android.application'
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/' }
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.8'
+    }
+}
+android {
+
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\naman\\.android\\debug.keystore')
+            storePassword '134'
+        }
+    }
+    compileSdkVersion 31
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.cscodetech.pharmafast"
+        minSdkVersion 21
+        targetSdkVersion 31
+        versionCode 4
+        versionName "1.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                onesignal_app_id               : '7717c896-5db9-4099-bdb1-536e58d7d443',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
+        
+    }
+    signingConfigs {
+        debug {
+            storeFile file('./debug.keystore')
+            storePassword 'naman321'
+            keyAlias 'test'
+            keyPassword 'naman321'
+        }
+        release {
+            storeFile file('./debug.keystore')
+            storePassword 'naman321'
+            keyAlias 'test'
+            keyPassword 'naman321'
+        }
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    android.ndkVersion="21.0.6113669"
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.3.0-alpha02'
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.google.firebase:firebase-analytics:20.1.2'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.merhold.extensiblepageindicator:extensiblepageindicator:1.0.1'
+    implementation 'com.elyeproj.libraries:loaderviewlibrary:1.0.3'
+    implementation 'com.google.android.libraries.places:places:2.3.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.google.firebase:firebase-analytics:20.1.2'
+    implementation 'com.google.firebase:firebase-auth:20.0.4'
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.onesignal:OneSignal:3.15.3'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.razorpay:checkout:1.5.13'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation 'com.stripe:stripe-android:14.5.0'
+    implementation "com.stripe:stripe-java:19.23.0"
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation platform('com.google.firebase:firebase-bom:29.3.1')
+    implementation 'com.google.firebase:firebase-analytics'
+}
+apply plugin: 'com.google.gms.google-services'
+
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core-ktx:1.6.0'
+    }
+}

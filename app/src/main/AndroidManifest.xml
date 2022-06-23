@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cscodetech.pharmafast">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.PresCartActivity"
+            android:exported="true" />
+        <activity android:name=".ui.ForgotActivity" />
+        <activity android:name=".ui.NotificationActivity" />
+        <activity android:name=".ui.ChanegPasswordActivity" />
+        <activity android:name=".ui.SearchActivity" />
+        <activity android:name=".ui.PrivacyPolicyActivity" />
+        <activity android:name=".ui.TramandconditionActivity" />
+        <activity android:name=".ui.ContactActivity" />
+        <activity android:name=".ui.AboutActivity" />
+        <activity android:name=".ui.UploadPrescriptionActivity" />
+        <activity android:name=".locationpick.LocationGetActivity" />
+        <activity android:name=".ui.OrderDetailsActivity" />
+        <activity android:name=".ui.PrescriptionOrderDetailsActivity" />
+        <activity android:name=".ui.OrderActivity" />
+        <activity android:name=".ui.PrescriptionOrderActivity" />
+        <activity android:name=".ui.SettingActivity" />
+        <activity android:name=".ui.ProfileActivity" />
+        <activity android:name=".ui.EditProfileActivity" />
+        <activity android:name=".ui.LoginActivity" />
+        <activity android:name=".ui.VerifyPhoneActivity" />
+        <activity android:name=".ui.CompleOrderActivity" />
+        <activity android:name=".ui.PaymentOptionActivity" />
+        <activity android:name=".ui.CartActivity" />
+        <activity android:name=".ui.AddressActivity" />
+        <activity android:name=".ui.ProductDetailsActivity" />
+        <activity android:name=".ui.HomeActivity" />
+        <activity android:name=".ui.CoupunActivity" />
+        <activity android:name=".ui.RazerpayActivity" />
+        <activity android:name=".ui.PaypalActivity" />
+        <activity android:name=".ui.StripPaymentActivity" />
+        <activity android:name=".ui.IntroActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ImagePreviewActivity"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "347238585752",
+    "project_id": "pharma-app-fb4da",
+    "storage_bucket": "pharma-app-fb4da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347238585752:android:3477c523c5d82526fa87ed",
+        "android_client_info": {
+          "package_name": "com.cscodetech.pharmafast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347238585752-amnqokd0m16eeavoimhngpeib50u6mje.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cscodetech.pharmafast",
+            "certificate_hash": "ca01268ac10ccd763cde7bc6436c7f758cbce6a4"
+          }
+        },
+        {
+          "client_id": "347238585752-g4uitnte8ut3t8un0109g89qget9ru36.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz-fN0n4qdKNdfF9SGuQGtchYvqu7Ucyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347238585752-g4uitnte8ut3t8un0109g89qget9ru36.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

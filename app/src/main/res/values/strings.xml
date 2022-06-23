@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TeleMed</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="uptitel">Upload Prescription</string>
+    <string name="api_key" translatable="false">AIzaSyAz-fN0n4qdKNdfF9SGuQGtchYvqu7Ucyk</string>
+</resources>

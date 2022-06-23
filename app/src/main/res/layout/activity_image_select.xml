@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_margin="5dp"
+    android:background="@drawable/top_round_shape"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textViewCamera"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_add"
+                android:drawableLeft="@drawable/ic_camera"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Camera"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+
+            <TextView
+                android:id="@+id/textViewGallery"
+                style="@style/TextAppearance.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewCamera"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_add"
+                android:drawableLeft="@drawable/ic_gellary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Gallery"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="40dp" />
+
+
+        <TextView
+            android:id="@+id/textViewCancel"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/textViewGallery"
+            android:layout_margin="5dp"
+            android:background="@drawable/rounded_add"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Cancel"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" />
+</RelativeLayout>
